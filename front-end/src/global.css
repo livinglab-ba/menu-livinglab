@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #292e38;
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+    margin-bottom: 2.25rem;
+}
+.logoLL {
+    width: 150px;
+    height: 50px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+img {
+    width: 280px;
+    height: 90px;
+}
