@@ -9,6 +9,10 @@ function generalEnergy(req, res) {
         const totem2 = shell.exec(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pi@10.146.42.231 'DISPLAY=:0.0 chromium-browser --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.12:3000/generalEnergy/'`)
         const totem3 = shell.exec(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pi@10.146.42.232 'DISPLAY=:0.0 chromium-browser --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.12:3000/generalEnergy/'`)
         const totem4 = shell.exec(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pi@10.146.42.233 'DISPLAY=:0.0 chromium-browser --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.12:3000/generalEnergy/'`)
+        const tv1 = shell.exec(`sshpass -p '$uport3fpc' ssh -o StrictHostKeyChecking=no linuxc@10.146.42.13 'DISPLAY=:0.0 firefox http://10.146.42.210:3000/'`)
+        const tv2 = shell.exec(`sshpass -p '$uport3fpc' ssh -o StrictHostKeyChecking=no linuxlited@10.146.42.18 'DISPLAY=:0.0 firefox http://10.146.42.210:3000/'`)
+        //const tv3 = shell.exec(`sshpass -p '$uport3fpc' ssh -o StrictHostKeyChecking=no pcminib@10.146.42.17 'DISPLAY=:0.0 firefox http://10.146.42.210:3000/'`)
+        
         // const tv1 = shell.exec(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pi@10.146.42.230 'DISPLAY=:0.0 chromium-browser --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.210:4000/'`)
         //  const tv2 = shell.exec(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pi@10.146.42.230 'DISPLAY=:0.0 chromium-browser --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.210:4000/'`)
         // const tv3 = shell.exec(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pi@10.146.42.230 'DISPLAY=:0.0 chromium-browser --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.210:4000/'`)
@@ -16,7 +20,10 @@ function generalEnergy(req, res) {
             totem1: totem1.stdout,
             totem2: totem2.stdout,
             totem3: totem3.stdout,
-            totem4: totem4.stdout
+            totem4: totem4.stdout,
+            tv1: tv1.stdout,
+            tv2: tv2.stdout,
+           // tv3: tv3.stdout,
         })
     }
     catch (err) {
