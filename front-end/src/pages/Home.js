@@ -34,12 +34,14 @@ function Home() {
     const handleChargeback = useCallback(async () => {
         const response = await api.get('/chargeback')
     
+        console.log('passou pela api: /chargback');
         navigate("/chargeback")
     }, [])
 
     const handleGeneralenergy = useCallback(async () => {
         const response = await api.get('/generalenergy')
     
+        console.log('passou pela api: /generalenergy');
         navigate("/generalenergy")
     }, [])
 
