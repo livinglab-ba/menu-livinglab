@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #292e38;
-}
-
 .App {
     width: 100vw;
     height: 100vh;
@@ -15,7 +11,7 @@ body {
     align-items: center;
     justify-content: center;
     
-    margin-bottom: 2.25rem;
+    /* margin-bottom: 2.25rem; */
 }
 .logoLL {
     width: 150px;

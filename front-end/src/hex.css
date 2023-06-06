@@ -1,0 +1,65 @@
+svg {
+
+}
+/*
+Russian blue pattern:
+#7be3f6
+#4499a9
+#276a76
+#133b43
+#03090a
+*/
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  background: #01181d;
+  opacity: 0.9;
+}
+
+
+svg g {
+  fill: #01181d;
+  fill-opacity: 0.4;
+}
+svg g:hover {
+  fill: #01090a;
+  fill-opacity: 1;
+}
+svg g:hover text {
+  fill-opacity: 1;
+}
+
+svg g .btn {
+  cursor: pointer;
+}
+
+svg g polygon:hover {
+  stroke: #073d47;
+  stroke-width: 0.2;
+  transition: fill-opacity .5s;
+}
+
+svg g polygon {
+  stroke: #7be3f6;
+  stroke-width: 0.2;
+  transition: fill-opacity .5s;
+}
+svg g text {
+  font-size: 0.22em;
+  fill: white;
+  fill-opacity: 0.7;
+  transition: fill-opacity .5s;
+}
+svg path {
+  fill: none;
+  stroke: #7be3f6;
+  stroke-width: 0.2em;
+  stroke-opacity: 0.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
