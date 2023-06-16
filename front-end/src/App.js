@@ -25,6 +25,7 @@ function App() {
         <Route path="giusoft" element={<Giusoft />} />
         <Route path="lactec" element={<Lactec />} />
       </Routes>
+
     </div>
   );
 }

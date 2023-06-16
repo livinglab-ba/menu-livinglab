@@ -1,0 +1,13 @@
+.inst {
+    width: 90%;
+
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    padding: 14px;
+}
+
+img {
+    
+}
