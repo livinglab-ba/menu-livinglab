@@ -1,7 +1,7 @@
 import { HexGrid, Layout, Path, Hexagon, Text, Pattern, Hex } from 'react-hexgrid';
 import { useCallback } from 'react';
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, redirect } from 'react-router-dom';
 
 
 import {api} from '../../axios'
@@ -15,49 +15,49 @@ function Home() {
 
   const hexagonSize = { x: 16, y: 16 };
   
-  const handleLivinglab = useCallback(async () => {
-    const response = await api.get('/livinglab')
+  const handleLivinglab = async () => {
+    await api.get('/livinglab');
+  };
 
-    navigate("/")
-}, [])
+  const handleHive = () => {
+    api.get('/hive')
+        .then(() => navigate("/hive"))
+        .catch(error => {
+            console.log("Erro ao navegar para página /hive");
+        });
+};
 
-const handleHive = useCallback(async () => {
-  const response = await api.get('/hive')
+  const handleLactec = useCallback(async () => {
+    const response = await api.get('/lactec1')
 
-  navigate("/hive")
-}, [])
+    navigate("/lactec")
+  }, [])
 
-const handleLactec = useCallback(async () => {
-  const response = await api.get('/lactec1')
+  const handleChargeback = useCallback(async () => {
+    const response = await api.get('/chargeback')
 
-  navigate("/lactec")
-}, [])
+    console.log('passou pela api: /chargback');
+    navigate("/chargeback")
+  }, [])
 
-const handleChargeback = useCallback(async () => {
-  const response = await api.get('/chargeback')
+  const handleGeneralenergy = useCallback(async () => {
+    const response = await api.get('/generalenergy')
 
-  console.log('passou pela api: /chargback');
-  navigate("/chargeback")
-}, [])
+    console.log('passou pela api: /generalenergy');
+    navigate("/generalenergy")
+  }, [])
 
-const handleGeneralenergy = useCallback(async () => {
-  const response = await api.get('/generalenergy')
+  const handleAdntech = useCallback(async () => {
+    const response = await api.get('/adntech')
 
-  console.log('passou pela api: /generalenergy');
-  navigate("/generalenergy")
-}, [])
+    navigate("/adn")
+  }, [])
 
-const handleAdntech = useCallback(async () => {
-  const response = await api.get('/adntech')
+  const handleGiusoft = useCallback(async () => {
+    const response = await api.get('/giusoft')
 
-  navigate("/adn")
-}, [])
-
-const handleGiusoft = useCallback(async () => {
-  const response = await api.get('/giusoft')
-
-  navigate("/giusoft")
-}, [])
+    navigate("/giusoft")
+  }, [])
                         
   return (
     <>
