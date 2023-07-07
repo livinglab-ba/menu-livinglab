@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MenuLL</title>
+  <style>
+    body {
+    background: linear-gradient(rgba(0.6, 0.6, 0.6, 0.9), rgba(0.5, 0.5, 0.5, 0.8)), url(./iot.jpg);
+    background-size: cover;
+}
+  
+  #image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+#image-container img {
+            display: none;
+        }
+        
+#image-container img.active {
+            display: block;
+        }
+        
+  #image1 {
+    width: 600px;
+    height: 300px;
+  }
+
+  #image2 {
+    width: 600px;
+    height: 400px;
+  }
+  #image3 {
+    width: 700px;
+    height: 600px;
+  }
+  #image4 {
+    width: 700px;
+    height: 300px;
+  }
+  #image5 {
+    width: 700px;
+    height: 200px;
+  }
+  #image6 {
+    width: 900px;
+    height: 400px;
+  }
+  </style>
+</head>
+<body>
+  <div id="image-container">
+    <img id="image1" src="./images/Hive_Cor.png"  alt="Hive">
+    <img id="image2" src="images/logo_big.png" alt="General-Energy">
+    <img id="image3" src="images/chargeback.png" alt="Charge-Back">
+    <img id="image4" src="images/lactec.png"  alt="Lactec">
+    <img id="image5" src="images/giusoft.png" alt="Giusoft">
+    <img id="image6" src="images/ADNtech.png" alt="AdnTech">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
