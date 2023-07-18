@@ -17,13 +17,11 @@ Russian blue pattern:
   align-items: center;
   justify-content: center;
 
-  background: #01181d;
-  opacity: 0.9;
 }
 
 
 svg g {
-  fill: #01181d;
+  fill: #eceeef;
 }
 svg g:hover {
   fill: #01090a;
@@ -40,7 +38,7 @@ svg g .btn {
 svg g polygon:hover {
   stroke: #073d47;
   stroke-width: 0.2;
-  transition: fill-opacity .5s;
+  transition: fill-opacity .0s;
 }
 
 svg g polygon {
@@ -56,9 +54,13 @@ svg g text {
 }
 svg path {
   fill: none;
-  stroke: #7be3f6;
+  stroke: #e4ebec;
   stroke-width: 0.2em;
   stroke-opacity: 0.7;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+Pattern{
+  background-color: white;
 }

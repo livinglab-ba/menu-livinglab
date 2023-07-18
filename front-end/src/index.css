@@ -7,12 +7,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: #133b43; */
-  background-color: #01181d;
-  background-image: url("../public/assets/iot.jpg");
+  background: linear-gradient(rgba(0.6, 0.6, 0.6, 0.9), rgba(0.5, 0.5, 0.5, 0.8)), url("../public/assets/iot.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  color: white;
+  color: rgb(50, 42, 42);
   text-align: center;
 }
 

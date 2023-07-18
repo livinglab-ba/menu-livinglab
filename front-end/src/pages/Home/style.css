@@ -6,8 +6,34 @@
     align-items: center;
 
     padding: 14px;
+    
 }
 
-img {
+
+
+
+#lactec{
+    transform: translate(3%, 0%);
     
+}
+
+#hive{
+    transform: translate(2%, 0%)
+}
+
+#pat-1{
+    transform: translate(2%, 0%);
+}
+
+#generalenergy{
+    transform: translate(2%, 0%);
+}
+#adn{
+    transform: translate(1%, 0%);
+}
+#giusoft{
+    transform: translate(2%, 0%);
+}
+polygon{
+    background-color: azure;
 }
