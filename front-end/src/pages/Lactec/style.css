@@ -1,12 +1,23 @@
-
-
-.logo {
+.lactec {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
-    background: #01181d;
-    opacity: 0.9;
+.lactecLogo {
+    
+}
+
+
+.lactec img {
+    width: 40%;
+    margin-bottom: 32px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
 }

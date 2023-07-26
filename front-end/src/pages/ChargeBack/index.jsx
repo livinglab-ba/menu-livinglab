@@ -7,7 +7,7 @@ import './style.css'
 function ChargeBack() {
     return (
         <div className='logo'>
-            <img src={ChargeBackLogo} />
+            <img src={ChargeBackLogo} width={'25%'} height={'50%'} />
         </div>
     )
 }

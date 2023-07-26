@@ -25,45 +25,56 @@ function Home() {
         .catch(error => {
             console.log("Erro ao navegar para página /hive");
         });
-};
+  };
 
-  const handleLactec = useCallback(async () => {
-    const response = await api.get('/lactec1')
-
+  const handleLactec = () => {
+    api.get('/lactec1')
+        .then(() => navigate("/lactec"))
+        .catch(error => {
+            console.log("Erro ao navegar para página /lactec");
+        });
     navigate("/lactec")
-  }, [])
+  };
 
-  const handleChargeback = useCallback(async () => {
-    const response = await api.get('/chargeback')
+  const handleChargeback = () => {
+    api.get('/chargeback')
+        .then(() => navigate("/chargeback"))
+        .catch(error => {
+            console.log("Erro ao navegar para página /chargeback");
+        });
+  };
 
-    console.log('passou pela api: /chargback');
-    navigate("/chargeback")
-  }, [])
+  const handleGeneralenergy = () => {
+    api.get('/generalenergy')
+        .then(() => navigate("/generalenergy"))
+        .catch(error => {
+            console.log("Erro ao navegar para página /generalenergy");
+        });
+  };
 
-  const handleGeneralenergy = useCallback(async () => {
-    const response = await api.get('/generalenergy')
+  const handleAdntech = () => {
+    api.get('/adntech')
+        .then(() => navigate("/adn"))
+        .catch(error => {
+            console.log("Erro ao navegar para página /adntech");
+        });
+  };
 
-    console.log('passou pela api: /generalenergy');
-    navigate("/generalenergy")
-  }, [])
+  const handleGiusoft = () => {
+    api.get('/giusoft')
+        .then(() => navigate("/giusoft"))
+        .catch(error => {
+            console.log("Erro ao navegar para página /giusoft");
+        });
+  };
 
-  const handleAdntech = useCallback(async () => {
-    const response = await api.get('/adntech')
-
-    navigate("/adn")
-  }, [])
-
-  const handleGiusoft = useCallback(async () => {
-    const response = await api.get('/giusoft')
-
-    navigate("/giusoft")
-  }, [])
-
-  const handleLactecTwo = useCallback(async () => {
-    const response = await api.get('/lactec')
-
-    navigate("/lactec")
-  }, [])
+  const handleLactecTwo = () => {
+    api.get('/lactec')
+        .then(() => navigate("/lactec"))
+        .catch(error => {
+            console.log("Erro ao navegar para página /lactec");
+        });
+  };
                         
   return (
     <>
@@ -74,27 +85,25 @@ function Home() {
             <Layout size={hexagonSize} flat={true} spacing={1.1} origin={{ x: 10, y: 0 }}>
               <Hexagon className='btn' q={0} r={0} s={0} fill="pat-1" onClick={handleLivinglab} />
               {/* Using pattern (defined below) to fill the hexagon */}
-              <Hexagon className='btn' q={0} r={-1} s={1} fill="chargeback" onClick={handleChargeback}/>
-              <Hexagon className='btn' q={0} r={1} s={-1} fill="adn" onClick={handleAdntech} />
+              <Hexagon className='btn' q={0} r={1} s={-1} fill="chargeback" onClick={handleChargeback}/>
+              <Hexagon className='btn' q={0} r={-1} s={1} fill="adn" onClick={handleAdntech} />
               <Hexagon className='btn' q={1} r={-1} s={0} fill="giusoft" onClick={handleGiusoft} />
               <Hexagon className= 'btn'q={1} r={0} s={-1} fill="generalenergy" onClick={handleGeneralenergy} />
               <Hexagon className='btn' q={-1} r={1} s={0} fill="hive"  onClick={handleHive} />
               <Hexagon className='btn' q={-1} r={0} s={5} fill="lactec" onClick={handleLactec} />
-              <Hexagon className='btn' q={-2} r={0} s={1} fill="lactecTwo" onClick={handleLactecTwo}/>
             </Layout>
             {/* You can define multiple patterns and switch between them with "fill" prop on Hexagon */}
-            <Pattern id="pat-1" link={`${address}/livinglab.png`} size={{x: 14, y: 14 }} />
+            <Pattern id="pat-1" link={`${address}/logo-parque-tecnologico-bahia.png`} size={{x: 14, y: 14 }} />
             <Pattern id="hive" link={`${address}/Hive/Hive_Claro.png`} size={{x: 14, y: 14 }} />
             <Pattern id="adn" link={`${address}/ADNtech/ADNtech.png`}  size={{x: 14, y: 14 }} />
             <Pattern id="giusoft" link={`${address}/Giusoft/giusoft.png`} size={{x: 14, y: 14 }} />
             <Pattern id="generalenergy" link={`${address}/GeneralEnergy/logo_big.png`} size={{x: 14, y: 12 }} />
             <Pattern id="lactec" link={`${address}/Lactec/lactec.png`}  size={{x: 12, y:14  }} />
             <Pattern id="chargeback" link={`${address}/Chargeback/CHARGEBACK.png`} size={{x: 16, y: 14 }} />
-            <Pattern id="pat-3" link={`${address}/logo192.png`} size={{x: 12, y: 12 }} />
         </HexGrid>
 
         <div className='inst'>
-          <img src={`${address}/livinglab.png`} style={{ width: "8%", height: "8%" }}/>
+          <img src={`${address}/logo-parque-tecnologico-bahia.png`} style={{ width: "8%", height: "8%" }}/>
           <img src={`${address}/AEPTECBA.png`} style={{ width: "6%", height: "6%" }}/>
           <img src={`${address}/Secti.png`} style={{ width: "8%", height: "8%" }}/>
         </div>

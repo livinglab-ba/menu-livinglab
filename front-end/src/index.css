@@ -6,12 +6,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: #133b43; */
-  background: linear-gradient(rgba(0.6, 0.6, 0.6, 0.9), rgba(0.5, 0.5, 0.5, 0.8)), url("../public/assets/iot.jpg");
+  background: #fff; 
+  /* background: linear-gradient(rgba(46, 45, 45, 0.9), rgba(38, 36, 36, 0.8)), url("../public/assets/iot.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
-  color: rgb(50, 42, 42);
+  background-size: cover; */
+  /* color: rgb(255, 255, 255); */
   text-align: center;
 }
 

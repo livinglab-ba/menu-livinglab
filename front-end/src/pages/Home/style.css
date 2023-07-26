@@ -13,27 +13,32 @@
 
 
 #lactec{
-    transform: translate(3%, 0%);
+    transform: translateX(4px);
     
 }
 
 #hive{
-    transform: translate(2%, 0%)
+    transform: translateX(2px);
 }
 
 #pat-1{
-    transform: translate(2%, 0%);
+    transform: translateX(2px);
 }
 
 #generalenergy{
-    transform: translate(2%, 0%);
+    transform: translateX(2px);
 }
 #adn{
-    transform: translate(1%, 0%);
+    transform: translate(2px);
 }
 #giusoft{
-    transform: translate(2%, 0%);
+    transform: translateX(2px);
 }
+
+.white-bg {
+    fill: white;
+  }
+  
 polygon{
     background-color: azure;
 }
