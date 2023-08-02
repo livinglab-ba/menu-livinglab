@@ -6,11 +6,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fff; 
-  /* background: linear-gradient(rgba(46, 45, 45, 0.9), rgba(38, 36, 36, 0.8)), url("../public/assets/iot.jpg");
+  /*background: #fff; */
+  background: url("../public/assets/iot5.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover; */
+  background-size: cover; 
   /* color: rgb(255, 255, 255); */
   text-align: center;
 }

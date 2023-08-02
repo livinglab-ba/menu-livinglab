@@ -93,12 +93,12 @@ function Home() {
               <Hexagon className='btn' q={-1} r={0} s={5} fill="lactec" onClick={handleLactec} />
             </Layout>
             {/* You can define multiple patterns and switch between them with "fill" prop on Hexagon */}
-            <Pattern id="pat-1" link={`${address}/logo-parque-tecnologico-bahia.png`} size={{x: 14, y: 14 }} />
-            <Pattern id="hive" link={`${address}/Hive/Hive_Claro.png`} size={{x: 14, y: 14 }} />
-            <Pattern id="adn" link={`${address}/ADNtech/ADNtech.png`}  size={{x: 14, y: 14 }} />
-            <Pattern id="giusoft" link={`${address}/Giusoft/giusoft.png`} size={{x: 14, y: 14 }} />
-            <Pattern id="generalenergy" link={`${address}/GeneralEnergy/logo_big.png`} size={{x: 14, y: 12 }} />
-            <Pattern id="lactec" link={`${address}/Lactec/lactec.png`}  size={{x: 12, y:14  }} />
+            <Pattern id="pat-1" link={`${address}/ParqueTecBa.png`} size={{x: 16, y: 14 }} />
+            <Pattern id="hive" link={`${address}/Hive/HIVE.png`} size={{x: 16, y: 14 }} />
+            <Pattern id="adn" link={`${address}/ADNtech/ADNTECH.png`}  size={{x: 16, y: 14 }} />
+            <Pattern id="giusoft" link={`${address}/Giusoft/GIUSOFT.png`} size={{x: 16, y: 14 }} />
+            <Pattern id="generalenergy" link={`${address}/GeneralEnergy/GENERALENERGY.png`} size={{x: 16, y: 13 }} />
+            <Pattern id="lactec" link={`${address}/Lactec/LACTEC.png`}  size={{x: 16, y:14  }} />
             <Pattern id="chargeback" link={`${address}/Chargeback/CHARGEBACK.png`} size={{x: 16, y: 14 }} />
         </HexGrid>
 

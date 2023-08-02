@@ -8,36 +8,6 @@
     padding: 14px;
     
 }
-
-
-
-
-#lactec{
-    transform: translateX(4px);
-    
-}
-
-#hive{
-    transform: translateX(2px);
-}
-
-#pat-1{
-    transform: translateX(2px);
-}
-
-#generalenergy{
-    transform: translateX(2px);
-}
-#adn{
-    transform: translate(2px);
-}
-#giusoft{
-    transform: translateX(2px);
-}
-
-.white-bg {
-    fill: white;
-  }
   
 polygon{
     background-color: azure;
