@@ -99,7 +99,7 @@ function Home() {
             <Pattern id="giusoft" link={`${address}/Giusoft/GIUSOFT.png`} size={{x: 16, y: 14 }} />
             <Pattern id="generalenergy" link={`${address}/GeneralEnergy/GENERALENERGY.png`} size={{x: 16, y: 13 }} />
             <Pattern id="lactec" link={`${address}/Lactec/LACTEC.png`}  size={{x: 16, y:14  }} />
-            <Pattern id="chargeback" link={`${address}/Chargeback/CHARGEBACK.png`} size={{x: 16, y: 14 }} />
+            <Pattern id="chargeback" link={`${address}/Chargeback/CHARGEBACK.png`} size={{x: 16, y: 13}} />
         </HexGrid>
 
         <div className='inst'>

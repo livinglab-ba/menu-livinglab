@@ -9,8 +9,8 @@ body {
   /*background: #fff; */
   background: url("../public/assets/iot5.png");
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; 
+  /* background-position: center center; */
+  background-size: cover;
   /* color: rgb(255, 255, 255); */
   text-align: center;
 }
