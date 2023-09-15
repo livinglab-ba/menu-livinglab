@@ -12,14 +12,14 @@ async function hiveComputerVision(req, res) {
     const password = 'raspberry';
     const password2 = '$uport3fpc';
     const sshCommands = [
-      () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pi@10.146.42.230 'DISPLAY=:0.0 chromium-browser --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.12:9000/hive'`),
-      () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pi@10.146.42.231 'DISPLAY=:0.0 chromium-browser --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.12:9000/hive'`),
-      () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pi@10.146.42.232 'DISPLAY=:0.0 chromium-browser --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.12:9000/hive'`),
-      () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pi@10.146.42.233 'DISPLAY=:0.0 chromium-browser --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.12:9000/hive'`),
+      () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pi@10.146.42.230 'DISPLAY=:0.0 chromium-browser --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.210:4001'`),
+      () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pi@10.146.42.231 'DISPLAY=:0.0 chromium-browser --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.210:4004'`),
+      () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pi@10.146.42.232 'DISPLAY=:0.0 chromium-browser --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.210:4002'`),
+      () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pi@10.146.42.233 'DISPLAY=:0.0 chromium-browser --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.210:4003'`),
       () => executeSSHCommand(`sshpass -p '${password2}' ssh -o StrictHostKeyChecking=no linuxc@10.146.42.50 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito  http://10.146.42.12:9000/hive'`),
       () => executeSSHCommand(`sshpass -p '${password2}' ssh -o StrictHostKeyChecking=no linuxlited@10.146.42.51 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito http://10.146.42.12:9000/hive'`),
       () => executeSSHCommand(`sshpass -p '${password2}' ssh -o StrictHostKeyChecking=no pcminib@10.146.42.52 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito  http://10.146.42.12:9000/hive'`),
-      () => executeSSHCommand(`sshpass -p '${password2}' ssh -o StrictHostKeyChecking=no pcminia@10.146.42.53 'pkill firefox; DISPLAY=:0.0 google-chrome --noerrors --disable-session-crashed-bubble --disable-infobars$fobars http://10.146.42.70/bluequeen/'`)
+      () => executeSSHCommand(`sshpass -p '${password2}' ssh -o StrictHostKeyChecking=no pcminia@10.146.42.53 'pkill firefox; DISPLAY=:0.0 google-chrome --noerrors --disable-session-crashed-bubble --disable-infobars$fobars http://10.146.42.160/bluequeen/'`)
     ];
 
     const promises = sshCommands.map(command => command());

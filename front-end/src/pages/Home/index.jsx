@@ -103,8 +103,11 @@ function Home() {
         </HexGrid>
 
         <div className='inst'>
-          <img src={`${address}/logo-parque-tecnologico-bahia.png`} style={{ width: "8%", height: "8%" }}/>
+          {/* Labes2 << UFBA << AEPETEC << Parque << Governo */}
+          <img src={`${address}/Labes-01.png`} style={{ width: "6%", height: "6%" }}/>
+          <img src={`${address}/ufba.png`} style={{ width: "8%", height: "8%" }}/>
           <img src={`${address}/AEPTECBA.png`} style={{ width: "6%", height: "6%" }}/>
+          <img src={`${address}/logo-parque-tecnologico-bahia.png`} style={{ width: "8%", height: "8%" }}/>
           <img src={`${address}/Secti.png`} style={{ width: "8%", height: "8%" }}/>
         </div>
 
