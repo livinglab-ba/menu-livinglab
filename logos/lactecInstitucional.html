@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexágono</title>
+    <style>
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            line-height: 1.5;
+            background: url("https://karenmenezes.com/static/img/demos/shapes-polygon/bg-cubes.png");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .hex {
+            width: 30px;
+            height: 50px;
+            background: #ffff;
+            position: relative;
+            cursor: pointer; /* Muda o cursor para indicar que é clicável */
+            transition: border-color 0.3s; /* Adiciona uma transição para a cor da borda */
+        }
+
+        .hex:hover {
+            border-color: black; /* Muda a cor da borda para preto ao passar o mouse */
+        }
+
+        .hex:after {
+            content: "";
+            border-left: 15px solid green;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            display: inline-block;
+            position: absolute;
+            right: -15px;
+        }
+
+        .hex:before {
+            content: "";
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-right: 15px solid green;
+            display: inline-block;
+            position: absolute;
+            left: -15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hex"></div>
+</body>
+</html>

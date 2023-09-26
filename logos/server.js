@@ -29,6 +29,14 @@ app.get('/lactec', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
   });
 
+app.get('/lactecInstitucional', (req, res) => {
+    res.sendFile(path.join(__dirname, 'lactecInstitucional.html'));
+  });
+
+app.get('/hiveInstitucional', (req, res) => {
+    res.sendFile(path.join(__dirname, 'hiveInstitucional.html'));
+  });
+
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
