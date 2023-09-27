@@ -10,8 +10,6 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    
-    /* margin-bottom: 2.25rem; */
 }
 .logoLL {
     width: 150px;
@@ -30,3 +28,4 @@ img {
     height: 90px;  
    
 }
+

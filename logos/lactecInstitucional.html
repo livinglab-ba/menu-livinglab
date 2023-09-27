@@ -1,56 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hexágono</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+    <title>Lactec Institucional</title>
     <style>
         body {
-            font-family: 'Roboto Condensed', sans-serif;
-            line-height: 1.5;
             background: url("https://karenmenezes.com/static/img/demos/shapes-polygon/bg-cubes.png");
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
         }
 
-        .hex {
-            width: 30px;
-            height: 50px;
-            background: #ffff;
+        .clip-svg {
+            width: 0;
+            height: 0;
+        }
+
+        .clip-caption {
+            width: 380px;
+            position: absolute;
+            top: 180px;
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateX(85px);
+            text-align: center;
+        }
+
+        .clip-each {
+            display: block;
             position: relative;
-            cursor: pointer; /* Muda o cursor para indicar que é clicável */
-            transition: border-color 0.3s; /* Adiciona uma transição para a cor da borda */
+            -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+            clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+            -webkit-clip-path: url("#hexagon-clip");
+            clip-path: url("#hexagon-clip");
+            -webkit-transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in;
+            margin: 0 auto;
         }
 
-        .hex:hover {
-            border-color: black; /* Muda a cor da borda para preto ao passar o mouse */
+        a.clip-each:hover {
+            background: #073d47;
+            -webkit-transition: all 0.25s ease-in;
+            transition: all 0.25s ease-in;
         }
 
-        .hex:after {
+        .clip-border {
+            background-color: #7be3f6;
+            width: 570px;
+            height: 550px;
+            margin-top: 7px;
+            color: #222;
+        }
+
+        .clip-border::after {
             content: "";
-            border-left: 15px solid green;
-            border-top: 25px solid transparent;
-            border-bottom: 25px solid transparent;
-            display: inline-block;
             position: absolute;
-            right: -15px;
+            top: 1%;
+            left: 1%;
+            right: 1%;
+            bottom: 1%;
+            margin: 0 auto;
+            background-color: #ffff;
+            -webkit-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+            -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+            clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+            -webkit-clip-path: url("#hexagon-clip");
+            clip-path: url("#hexagon-clip");
+            z-index: -1;
         }
 
-        .hex:before {
-            content: "";
-            border-top: 25px solid transparent;
-            border-bottom: 25px solid transparent;
-            border-right: 15px solid green;
-            display: inline-block;
-            position: absolute;
-            left: -15px;
+        .clip-tagline {
+            display: block;
+            color: #758C9B;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .clip-block {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .clip-border {
+            margin-top: -100px;
+        }
+
+        p {
+            font-size: 100px;
+            text-align: center;
+            border: #7be3f6;
+            color: #073d47;
+            font-family: 'Titillium Web', sans-serif;
         }
     </style>
 </head>
+
 <body>
-    <div class="hex"></div>
+    <p> Vídeo Institucional </p>
+    <a href="#" class="clip-each clip-border">
+        <img class="clip-caption" src="images/lactec.png">
+    </a>
+    </div>
+
+    <svg class="clip-svg">
+        <defs>
+            <clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox">
+                <polygon points="0.25 0.05, 0.75 0.05, 1 0.5, 0.75 0.95, 0.25 0.95, 0 0.5" />
+            </clipPath>
+        </defs>
+    </svg>
+
+    <svg class="clip-svg">
+        <defs>
+            <clipPath id="triangle-clip" clipPathUnits="objectBoundingBox">
+                <polygon points="1 0.03, 0.17 1, 1 1" />
+            </clipPath>
+        </defs>
+    </svg>
 </body>
+
+<script>
+    const losango = document.querySelector(".clip-caption")
+    losango.addEventListener("click", function () {
+        const videoUrl = "http://10.146.42.12:9000/images/LACTEC_Institucional.mp4"
+        window.location.href = videoUrl;
+    })
+</script>
+
 </html>

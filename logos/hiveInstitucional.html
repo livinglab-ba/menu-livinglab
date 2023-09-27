@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+    <title>Hive Institucional</title>
+    <style>
+        body {
+            background: url("https://karenmenezes.com/static/img/demos/shapes-polygon/bg-cubes.png");
+        }
+
+        .clip-svg {
+            width: 0;
+            height: 0;
+        }
+
+        .clip-caption1 {
+            width: 500px;
+            position: absolute;
+            top: 140px;
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateX(30px);
+            text-align: center;
+        }
+
+        .clip-caption2 {
+            width: 500px;
+            position: absolute;
+            top: 140px;
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateX(30px);
+            text-align: center;
+        }
+
+        .clip-each {
+            display: block;
+            position: relative;
+            -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+            clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+            -webkit-clip-path: url("#hexagon-clip");
+            clip-path: url("#hexagon-clip");
+            -webkit-transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in;
+            margin: 0 auto;
+        }
+
+        a.clip-each:hover {
+            background: #073d47;
+            -webkit-transition: all 0.25s ease-in;
+            transition: all 0.25s ease-in;
+        }
+
+        .clip-border {
+            background-color: #7be3f6;
+            width: 570px;
+            height: 550px;
+            margin-top: 7px;
+            color: #222;
+        }
+
+        .clip-border::after {
+            content: "";
+            position: absolute;
+            top: 1%;
+            left: 1%;
+            right: 1%;
+            bottom: 1%;
+            margin: 0 auto;
+            background-color: #ffff;
+            -webkit-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+            -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+            clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+            -webkit-clip-path: url("#hexagon-clip");
+            clip-path: url("#hexagon-clip");
+            z-index: -1;
+        }
+
+        .clip-tagline {
+            display: block;
+            color: #758C9B;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .clip-block {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .clip-border {
+            margin-top: -100px;
+        }
+
+        p {
+            font-size: 100px;
+            text-align: center;
+            border: #7be3f6;
+            color: #073d47;
+            font-family: 'Titillium Web', sans-serif;
+        }
+        .container1{
+            display: flex;
+            flex-direction: row;
+            gap: 120px;
+            margin-left: 80px;
+        }
+        .container2{
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container1">
+    <p> Vídeo Institucional </p>
+    <p>Vídeo Solução</p>
+    </div>
+
+    <div class="container2">
+    <a href="#" class="clip-each clip-border">
+        <img class="clip-caption1" src="images/hive-logo.png">
+    </a>
+    <a href="#" class="clip-each clip-border">
+        <img class="clip-caption2" src="images/hive-logo.png">
+    </a>
+</div>
+    <svg class="clip-svg">
+        <defs>
+            <clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox">
+                <polygon points="0.25 0.05, 0.75 0.05, 1 0.5, 0.75 0.95, 0.25 0.95, 0 0.5" />
+            </clipPath>
+        </defs>
+    </svg>
+
+    <svg class="clip-svg">
+        <defs>
+            <clipPath id="triangle-clip" clipPathUnits="objectBoundingBox">
+                <polygon points="1 0.03, 0.17 1, 1 1" />
+            </clipPath>
+        </defs>
+    </svg>
+</body>
+
+<script>
+    const losango = document.querySelector(".clip-caption1")
+    losango.addEventListener("click", function () {
+        const videoUrl = "http://10.146.42.12:9000/images/LACTEC_Institucional.mp4"
+        window.location.href = videoUrl;
+    })
+    const losango2 = document.querySelector(".clip-caption2")
+    losango2.addEventListener("click", function () {
+        const videoUrl = "http://10.146.42.12:9000/images/HIVE - MEGAN INTELIGÊNCIA ARTIFICIAL.mp4"
+        window.location.href = videoUrl;
+    })
+</script>
+
+</html>

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/livinglab-ba/menu-livinglab#readme",
   "dependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "react-modal": "^3.16.1"
   }
 }

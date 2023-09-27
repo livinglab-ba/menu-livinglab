@@ -1,15 +1,3 @@
-svg {
-
-}
-/*
-Russian blue pattern:
-#7be3f6
-#4499a9
-#276a76
-#133b43
-#03090a
-*/
-
 .App {
   width: 100vw;
   height: 100vh;
@@ -64,3 +52,26 @@ svg path {
 Pattern{
   background-color: white;
 }
+
+/* Estilize o modal com a classe 'custom-modal' */
+.custom-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  width: 400px; /* Defina a largura máxima desejada */
+  margin-top: 300px;  /* Centralize horizontalmente o modal */
+  margin-left: 700px;
+  background-color: #ffff;
+}
+
+.custom-modal h2 {
+  font-size: 1.5rem; 
+  color: #073d47;/* Tamanho da fonte do cabeçalho */
+}
+
+.custom-modal button{
+  
+}
+
+/* Estilize outros elementos conforme necessário */
