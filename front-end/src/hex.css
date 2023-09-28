@@ -58,10 +58,10 @@ Pattern{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 200px;
+  height: 280px;
   width: 400px; /* Defina a largura máxima desejada */
-  margin-top: 300px;  /* Centralize horizontalmente o modal */
-  margin-left: 700px;
+  margin-top: 250px;  /* Centralize horizontalmente o modal */
+  margin-left: 550px;
   background-color: #ffff;
 }
 
@@ -70,8 +70,33 @@ Pattern{
   color: #073d47;/* Tamanho da fonte do cabeçalho */
 }
 
-.custom-modal button{
-  
+.custom-modal .container-hive {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  justify-content: center;
 }
 
-/* Estilize outros elementos conforme necessário */
+.custom-modal img{
+  cursor: pointer;
+}
+
+.custom-modal .container-roteador{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ gap: 80px;
+}
+
+.custom-modal .container-macrofitas{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 80px;
+ }
+
+ p{
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+  color: #073d47;
+ }

@@ -143,12 +143,10 @@ function Home() {
           className='custom-modal'
 
         >
-
-          <h2>Opções de Apresentação</h2>
           {
             <div className='container-hive'>
-              <button onClick={handleHiveOne}>Apresentação 01</button>
-              <button onClick={handleHiveOneI}> Apresentação 02</button>
+              <img onClick={handleHiveOne} src={`${address}/icons8-câmera-tipo-redoma-100.png`} />
+              <img onClick={handleHiveOneI} src={`${address}/icons8-câmera-tipo-redoma-100-blue.png`} />
             </div>
           }
         </Modal>
@@ -157,19 +155,19 @@ function Home() {
           isOpen={lactecModalOpen}
           onRequestClose={() => setLactecModalOpen(false)}
           contentLabel='Opções da Lactec'
+          className='custom-modal'
         >
-          <h2>Opções de Apresentação</h2>
           {
             <div className='container-lactec'>
+              <p>Roteador</p>
               <div className='container-roteador'>
-                <p>Roteador</p>
-                <button onClick={handleLactecOne}>Apresentação 01</button>
-                <button onClick={handleLactecOneI}>Apresentação 02</button>
+                <img onClick={handleLactecOne} src={`${address}/icons8-roteador-64.png`} />
+                <img onClick={handleLactecOneI} src={`${address}/icons8-roteador-64-blue.png`} />
               </div>
+              <p>Macrófitas</p>
               <div className='container-macrofitas'> 
-                <p>Macrófitas</p>
-                <button onClick={handleLactecTwo}>Apresentação 01</button>
-                <button onClick={handleLactecTwoI}>Apresentação 02</button>
+                <img onClick={handleLactecTwo} src={`${address}/icons8-hydroponics-50.png`} />
+                <img onClick={handleLactecTwoI} src={`${address}/icons8-hydroponics-50-blue.png`} />
               </div>
             </div>
           }
