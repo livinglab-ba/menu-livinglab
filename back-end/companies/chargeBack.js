@@ -18,7 +18,7 @@ async function chargeBack(req, res) {
       () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pcminia@10.146.42.233 'DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.12:9000/charge-back'`),
       () => executeSSHCommand(`sshpass -p '${password2}' ssh -o StrictHostKeyChecking=no pc-mini-02@10.146.42.50 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito http://10.146.42.12:9000/charge-back'`),
       () => executeSSHCommand(`sshpass -p '${password2}' ssh -o StrictHostKeyChecking=no pc-mini-04@10.146.42.51 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito http://10.146.42.12:9000/charge-back'`),
-      () => executeSSHCommand(`sshpass -p '${password2}' ssh -o StrictHostKeyChecking=no pc-mini-01@10.146.42.52 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito https://ds-demo.use-move.com/auth/login'`),
+      () => executeSSHCommand(`sshpass -p '${password2}' ssh -o StrictHostKeyChecking=no pc-mini-01@10.146.42.52 'pkill firefox; DISPLAY=:0.0 google-chrome --noerrors --disable-session-crashed-bubble --disable-infobars$fobars https://ds-demo.use-move.com/auth/login'`),
       () => executeSSHCommand(`sshpass -p '${password2}' ssh -o StrictHostKeyChecking=no pc-mini-03@10.146.42.53 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito http://10.146.42.12:9000/charge-back'`)
     ];
 

@@ -60,8 +60,8 @@ Pattern{
   justify-content: center;
   height: 280px;
   width: 400px; /* Defina a largura máxima desejada */
-  margin-top: 250px;  /* Centralize horizontalmente o modal */
-  margin-left: 550px;
+  margin-top: 400px;  /* Centralize horizontalmente o modal */
+  margin-left: 750px;
   background-color: #ffff;
 }
 
