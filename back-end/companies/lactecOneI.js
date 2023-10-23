@@ -12,16 +12,15 @@ async function executeSSHCommand(command) {
 async function lactecOneI(req, res) {
   try {
     const password = '$uport3fpc';
-    const password2 = '$uport3fpc';
     const sshCommands = [
       () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no linuxc@10.146.42.230 'DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.12:9000/lactec'`),
       () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pcminib@10.146.42.231 'DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.12:9000/lactec'`),
       () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no linuxlited@10.146.42.232 'DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.12:9000/lactec'`),
       () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pcminia@10.146.42.233 'DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --kiosk --incognito http://10.146.42.12:9000/lactec'`),
-      () => executeSSHCommand(`sshpass -p '${password2}' ssh -o StrictHostKeyChecking=no pc-mini-02@10.146.42.50 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito http://10.146.42.180:8080/dashboard/9927d650-cf0e-11ed-95ac-938d7811d739?publicId=b89bf410-bd13-11ed-b156-0b9d7fb80052'`),
-      () => executeSSHCommand(`sshpass -p '${password2}' ssh -o StrictHostKeyChecking=no pc-mini-04@10.146.42.51 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito http://10.146.42.180:8080/dashboard/9927d650-cf0e-11ed-95ac-938d7811d739?publicId=b89bf410-bd13-11ed-b156-0b9d7fb80052'`),
-      () => executeSSHCommand(`sshpass -p '${password2}' ssh -o StrictHostKeyChecking=no pc-mini-01@10.146.42.52 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito http://10.146.42.180:8080/dashboard/9927d650-cf0e-11ed-95ac-938d7811d739?publicId=b89bf410-bd13-11ed-b156-0b9d7fb80052'`),
-      () => executeSSHCommand(`sshpass -p '${password2}' ssh -o StrictHostKeyChecking=no pc-mini-03@10.146.42.53 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito http://10.146.42.12:9000/lactecInstitucional'`)
+      () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pc-mini-02@10.146.42.50 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito http://10.146.42.180:8080/dashboard/9927d650-cf0e-11ed-95ac-938d7811d739?publicId=b89bf410-bd13-11ed-b156-0b9d7fb80052'`),
+      () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pc-mini-04@10.146.42.51 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito http://10.146.42.180:8080/dashboard/9927d650-cf0e-11ed-95ac-938d7811d739?publicId=b89bf410-bd13-11ed-b156-0b9d7fb80052'`),
+      () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pc-mini-01@10.146.42.52 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito http://10.146.42.180:8080/dashboard/9927d650-cf0e-11ed-95ac-938d7811d739?publicId=b89bf410-bd13-11ed-b156-0b9d7fb80052'`),
+      () => executeSSHCommand(`sshpass -p '${password}' ssh -o StrictHostKeyChecking=no pc-mini-03@10.146.42.53 'pkill firefox; DISPLAY=:0.0 firefox --noerrors --disable-session-crashed-bubble --disable-infobars$fobars --incognito http://10.146.42.12:9000/lactecInstitucional'`)
     ];
 
     const promises = sshCommands.map(command => command());
